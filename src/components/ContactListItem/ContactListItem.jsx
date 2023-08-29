@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './ContactListItem.module.css';
 
 const ContactListItem = ({ contact, onDeleteContact }) => {
-  const { id, name, number } = contact;
+  const { name, number } = contact;
 
   return (
     <li className={styles.item}>

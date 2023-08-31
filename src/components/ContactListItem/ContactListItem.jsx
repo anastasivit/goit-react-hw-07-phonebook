@@ -8,7 +8,7 @@ const ContactListItem = ({ contact, onDeleteContact }) => {
   return (
     <li className={styles.item}>
       <span>{name}</span>
-      <span>{number}</span>
+      <span>{number || 'No number available'}</span>
       <button className={styles.button} type="button" onClick={onDeleteContact}>
         Delete
       </button>
@@ -20,7 +20,7 @@ ContactListItem.propTypes = {
   contact: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
+    number: PropTypes.string,
   }).isRequired,
   onDeleteContact: PropTypes.func.isRequired,
 };

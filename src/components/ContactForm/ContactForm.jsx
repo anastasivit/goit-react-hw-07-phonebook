@@ -26,6 +26,9 @@ const ContactForm = () => {
       return;
     }
 
+    console.log('Adding contact with name:', name);
+    console.log('Adding contact with phone:', phone);
+
     dispatch(addContact({ name, phone }));
     setName('');
     setPhone('');
